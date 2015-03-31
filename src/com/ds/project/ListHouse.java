@@ -21,10 +21,13 @@ public class ListHouse extends javax.swing.JDialog {
 
     /**
      * Creates new form ListHouse
+     * @param parent
+     * @param modal
      */
     public ListHouse(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setLocationRelativeTo(null);
     }
     
     public ListHouse(java.awt.Frame parent, boolean modal, List<House> houses){
@@ -39,8 +42,7 @@ public class ListHouse extends javax.swing.JDialog {
         HouseFile hr = new HouseFile();
         hr.saveHouseList(houses);
         
-        DefaultTableModel df;
-        df = (DefaultTableModel) jTable1.getModel();
+        DefaultTableModel df = (DefaultTableModel) jTable1.getModel();
         
         for(House h: houses){
             Vector v = new Vector();
@@ -69,6 +71,7 @@ public class ListHouse extends javax.swing.JDialog {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("All House");
         setAlwaysOnTop(true);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(

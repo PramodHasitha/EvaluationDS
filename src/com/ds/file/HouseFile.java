@@ -80,9 +80,9 @@ public class HouseFile {
             System.out.println(ioe.getMessage());
         }
     }
-    
-     public void saveHouseList(List<House> house) {
-        String text = "";
+    private String text = "";
+
+    public void saveHouseList(List<House> house) {
         for (House h : house) {
             text += h.getLotNumber() + "\t" + h.getFirstName() + "\t" + h.getLastName() + "\t" + h.getPrice() + "\t" + h.getSquareFeet() + "\t" + h.getNoOfBedroom() + "\n";
         }
