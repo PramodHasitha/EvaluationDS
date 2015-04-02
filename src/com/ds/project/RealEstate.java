@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.ds.project;
+
 import com.ds.file.HouseFile;
+import com.ds.interfaces.Listable;
 import com.ds.objects.House;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,14 +16,17 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import org.jvnet.substance.skin.SubstanceNebulaBrickWallLookAndFeel;
 import org.jvnet.substance.skin.SubstanceOfficeBlue2007LookAndFeel;
+
 /**
  *
  * @author Ezio
  */
-public class RealEstate extends javax.swing.JFrame {
+public class RealEstate extends javax.swing.JFrame implements Listable {
+
     private List<House> houses;
     private int row = 0;
     private Boolean checkAdd = true;
+
     /**
      * Creates new form RealEstate
      */
@@ -284,12 +288,7 @@ public class RealEstate extends javax.swing.JFrame {
             house.setPrice(Long.parseLong(jTextField_price.getText()));
             house.setSquareFeet(Long.parseLong(jTextField_sqareFeet.getText()));
 
-            Boolean bol = false;
-            for (House h : houses) {
-                if (Objects.equals(h.getLotNumber(), house.getLotNumber())) {
-                    bol = true;
-                }
-            }
+            Boolean bol = compierList(Long.parseLong(jTextField_lotNumber.getText()));
 
             if (bol) {
                 JOptionPane.showMessageDialog(rootPane, "Error in Lot Number", "Error", JOptionPane.WARNING_MESSAGE);
@@ -423,21 +422,21 @@ public class RealEstate extends javax.swing.JFrame {
             }
         });
     }
-    
-    private void clear(){
-        
-                jTextField_firstName.setText("");
-                jTextField_lastName.setText("");
-                jTextField_lotNumber.setText("");
-                jTextField_numBedRooms.setText("");
-                jTextField_price.setText("");
-                jTextField_sqareFeet.setText("");
 
-                jLabel_dis.setText("Next House Displaed : ");
+    private void clear() {
 
-                row = 0;
+        jTextField_firstName.setText("");
+        jTextField_lastName.setText("");
+        jTextField_lotNumber.setText("");
+        jTextField_numBedRooms.setText("");
+        jTextField_price.setText("");
+        jTextField_sqareFeet.setText("");
 
-                checkAdd = true;
+        jLabel_dis.setText("Next House Displaed : ");
+
+        row = 0;
+
+        checkAdd = true;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -461,4 +460,17 @@ public class RealEstate extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_price;
     private javax.swing.JTextField jTextField_sqareFeet;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public Boolean compierList(Long lotNumber) {
+        Boolean bol = false;
+        for (House h : houses) {
+            if (lotNumber.equals(h.getLotNumber())) {
+                bol = true;
+                break;
+            }
+        }
+        
+        return bol;
+    }
 }
