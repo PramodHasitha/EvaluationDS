@@ -239,18 +239,24 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
 
     private void jButton_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_resetActionPerformed
 
-        jTextField_firstName.setText("");
-        jTextField_lastName.setText("");
-        jTextField_lotNumber.setText("");
-        jTextField_numBedRooms.setText("");
-        jTextField_price.setText("");
-        jTextField_sqareFeet.setText("");
+        int i = JOptionPane.showConfirmDialog(rootPane, "What do you want \n Yes - Delete File \n No - Clear Fields", "Confirm", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
 
-        jLabel_dis.setText("Next House Displaed : ");
+        if (i == 0) {
 
-        row = 0;
+        } else if (i == 1) {
+            jTextField_firstName.setText("");
+            jTextField_lastName.setText("");
+            jTextField_lotNumber.setText("");
+            jTextField_numBedRooms.setText("");
+            jTextField_price.setText("");
+            jTextField_sqareFeet.setText("");
 
-        checkAdd = true;
+            jLabel_dis.setText("Next House Displaed : ");
+
+            row = 0;
+
+            checkAdd = true;
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_resetActionPerformed
 
@@ -471,7 +477,7 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
                 break;
             }
         }
-        
+
         return bol;
     }
 }
