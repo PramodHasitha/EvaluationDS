@@ -82,32 +82,5 @@ public class HouseFile {
     }
     private String text = "";
 
-    public void saveHouseList(List<House> house) {
-        for (House h : house) {
-            text += h.getLotNumber() + "\t" + h.getFirstName() + "\t" + h.getLastName() + "\t" + h.getPrice() + "\t" + h.getSquareFeet() + "\t" + h.getNoOfBedroom() + "\n";
-        }
-//        System.out.println(text);
-        try {
-            BufferedWriter output = null;
-            File file = new File("HouseData");
-            output = new BufferedWriter(new FileWriter(file));
-            output.write(text);
-            output.close();
-        } catch (IOException ioe) {
-            System.out.println(ioe.getMessage());
-        }
-    }
-    
-    public void deleteFile(){
-        try {
-            BufferedWriter output = null;
-            File file = new File("HouseData");
-            output = new BufferedWriter(new FileWriter(file));
-            output.write("");
-            output.close();
-        } catch (IOException ioe) {
-            System.out.println(ioe.getMessage());
-        }
-    }
 
 }
