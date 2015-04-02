@@ -14,6 +14,7 @@ import java.util.Objects;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import org.jvnet.substance.skin.SubstanceBusinessBlueSteelLookAndFeel;
 import org.jvnet.substance.skin.SubstanceNebulaBrickWallLookAndFeel;
 import org.jvnet.substance.skin.SubstanceOfficeBlue2007LookAndFeel;
 
@@ -415,7 +416,7 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
                 new RealEstate().setVisible(true);
                 try {
 //                    UIManager.setLookAndFeel(new SubstanceNebulaBrickWallLookAndFeel());
-                    UIManager.setLookAndFeel(new SubstanceOfficeBlue2007LookAndFeel());
+                    UIManager.setLookAndFeel(new SubstanceBusinessBlueSteelLookAndFeel());
 //                    UIManager.setLookAndFeel(new SynthLookAndFeel());
                 } catch (UnsupportedLookAndFeelException e) {
                 }
