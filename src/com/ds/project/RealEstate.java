@@ -376,21 +376,13 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
 
     private void jButton_findActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_findActionPerformed
 
+        Long lot = Long.parseLong(jTextField_lotNumber.getText());
         jTextField_firstName.setText("");
-        jTextField_lastName.setText("");
-        //        jTextField_lotNumber.setText("");
-        jTextField_numBedRooms.setText("");
-        jTextField_price.setText("");
-        jTextField_sqareFeet.setText("");
-
-        jLabel_dis.setText("Next House Displaed : ");
-
-        row = 0;
-
-        checkAdd = true;
+        
+        clear();
 
         try {
-            Long lotNumber = Long.parseLong(jTextField_lotNumber.getText());
+            Long lotNumber = lot;
 
             HouseFile hf = new HouseFile();
             List<House> houses = hf.readFile();
