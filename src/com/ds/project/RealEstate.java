@@ -242,7 +242,11 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
         int i = JOptionPane.showConfirmDialog(rootPane, "What do you want \n Yes - Delete File \n No - Clear Fields", "Confirm", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
 
         if (i == 0) {
-
+            HouseFile hf = new HouseFile();
+            hf.deleteFile();
+            
+            houses = hf.readFile();
+            JOptionPane.showMessageDialog(rootPane, "Sucessfully Deleted", "Sucess ", JOptionPane.INFORMATION_MESSAGE);
         } else if (i == 1) {
             jTextField_firstName.setText("");
             jTextField_lastName.setText("");
