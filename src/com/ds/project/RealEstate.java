@@ -27,6 +27,7 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
     private List<House> houses;
     private int row = 0;
     private Boolean checkAdd = true;
+    private HouseFile hf;
 
     /**
      * Creates new form RealEstate
@@ -39,6 +40,7 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
 
         houses = fm.readFile();
 
+        setHouseFile();
 //        fm.saveFile("123\tpp\tpp1\t321\t100\t2");
 //        SortedList sl = new SortedList();
 //        sl.setHouses(houses);
@@ -52,6 +54,9 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
 //        System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::");
     }
 
+    private void setHouseFile(){
+        hf = new HouseFile();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -242,7 +247,6 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
         int i = JOptionPane.showConfirmDialog(rootPane, "What do you want \n Yes - Delete File \n No - Clear Fields", "Confirm", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
 
         if (i == 0) {
-            HouseFile hf = new HouseFile();
             hf.deleteFile();
             
             houses = hf.readFile();
@@ -304,10 +308,8 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
             if (bol) {
                 JOptionPane.showMessageDialog(rootPane, "Error in Lot Number", "Error", JOptionPane.WARNING_MESSAGE);
             } else {
-                HouseFile fm = new HouseFile();
-                fm.saveHouseFile(house);
+                hf.saveHouseFile(house);
 
-                HouseFile hf = new HouseFile();
                 houses = hf.readFile();
 
                 JOptionPane.showMessageDialog(rootPane, "Successfully Added", "Success", JOptionPane.INFORMATION_MESSAGE);
@@ -334,21 +336,22 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
             }
 
             JOptionPane.showMessageDialog(rootPane, "Successfully Delete", "Success", JOptionPane.INFORMATION_MESSAGE);
-
-            jTextField_firstName.setText("");
-            jTextField_lastName.setText("");
-            jTextField_lotNumber.setText("");
-            jTextField_numBedRooms.setText("");
-            jTextField_price.setText("");
-            jTextField_sqareFeet.setText("");
-
-            jLabel_dis.setText("Next House Displaed : ");
-
-            row = 0;
-
-            checkAdd = true;
+//
+//            jTextField_firstName.setText("");
+//            jTextField_lastName.setText("");
+//            jTextField_lotNumber.setText("");
+//            jTextField_numBedRooms.setText("");
+//            jTextField_price.setText("");
+//            jTextField_sqareFeet.setText("");
+//
+//            jLabel_dis.setText("Next House Displaed : ");
+//
+//            row = 0;
+//
+//            checkAdd = true;
+            
+            clear();
             System.out.println(newList.size());
-            HouseFile hf = new HouseFile();
             hf.saveHouseList(newList);
 
             houses = hf.readFile();
@@ -361,7 +364,6 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
         ListHouse lh = new ListHouse(this, rootPaneCheckingEnabled, houses);
         lh.setVisible(true);
 
-        HouseFile hf = new HouseFile();
 
         houses = hf.readFile();
 
@@ -384,8 +386,7 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
         try {
             Long lotNumber = lot;
 
-            HouseFile hf = new HouseFile();
-            List<House> houses = hf.readFile();
+            houses = hf.readFile();
             Boolean v = false;
             //            System.out.println("l "+lotNumber);
             for (House h : houses) {
