@@ -97,5 +97,17 @@ public class HouseFile {
             System.out.println(ioe.getMessage());
         }
     }
+    
+    public void deleteFile(){
+        try {
+            BufferedWriter output = null;
+            File file = new File("HouseData");
+            output = new BufferedWriter(new FileWriter(file));
+            output.write("");
+            output.close();
+        } catch (IOException ioe) {
+            System.out.println(ioe.getMessage());
+        }
+    }
 
 }
