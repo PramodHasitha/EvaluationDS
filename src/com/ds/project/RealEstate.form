@@ -24,11 +24,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel_dis" alignment="1" pref="213" max="32767" attributes="0"/>
+                  <Component id="jLabel_dis" alignment="1" pref="215" max="32767" attributes="0"/>
                   <Component id="jLabel4" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jLabel2" alignment="1" pref="213" max="32767" attributes="0"/>
+                  <Component id="jLabel2" alignment="1" pref="215" max="32767" attributes="0"/>
                   <Component id="jLabel3" alignment="1" max="32767" attributes="0"/>
                   <Component id="jLabel7" alignment="1" max="32767" attributes="0"/>
                   <Component id="jLabel5" alignment="1" max="32767" attributes="0"/>
@@ -37,17 +38,17 @@
                   <Component id="jButton_add" alignment="1" max="32767" attributes="0"/>
                   <Component id="jButton_list" alignment="1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTextField_lotNumber" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                  <Component id="jTextField_firstName" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                  <Component id="jTextField_lastName" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                  <Component id="jTextField_price" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                  <Component id="jTextField_sqareFeet" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                  <Component id="jTextField_numBedRooms" alignment="0" min="-2" pref="280" max="-2" attributes="0"/>
-                  <Component id="jButton_next" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jButton_delete" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jButton_find" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jTextField_lotNumber" alignment="1" min="-2" pref="280" max="-2" attributes="0"/>
+                  <Component id="jTextField_firstName" alignment="1" min="-2" pref="280" max="-2" attributes="0"/>
+                  <Component id="jTextField_lastName" alignment="1" min="-2" pref="280" max="-2" attributes="0"/>
+                  <Component id="jTextField_price" alignment="1" min="-2" pref="280" max="-2" attributes="0"/>
+                  <Component id="jTextField_sqareFeet" alignment="1" min="-2" pref="280" max="-2" attributes="0"/>
+                  <Component id="jTextField_numBedRooms" alignment="1" min="-2" pref="280" max="-2" attributes="0"/>
+                  <Component id="jButton_next" max="32767" attributes="0"/>
+                  <Component id="jButton_delete" pref="283" max="32767" attributes="0"/>
+                  <Component id="jButton_find" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
