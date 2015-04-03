@@ -10,7 +10,7 @@ package com.ds.objects;
  *
  * @author Ezio
  */
- class House {
+public class House {
     
     private Long lotNumber;
     private String firstName;
