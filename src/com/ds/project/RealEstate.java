@@ -325,19 +325,7 @@ public class RealEstate extends javax.swing.JFrame implements Listable {
             }
 
             JOptionPane.showMessageDialog(rootPane, "Successfully Delete", "Success", JOptionPane.INFORMATION_MESSAGE);
-//
-//            jTextField_firstName.setText("");
-//            jTextField_lastName.setText("");
-//            jTextField_lotNumber.setText("");
-//            jTextField_numBedRooms.setText("");
-//            jTextField_price.setText("");
-//            jTextField_sqareFeet.setText("");
-//
-//            jLabel_dis.setText("Next House Displaed : ");
-//
-//            row = 0;
-//
-//            checkAdd = true;
+
             
             clear();
             System.out.println(newList.size());
