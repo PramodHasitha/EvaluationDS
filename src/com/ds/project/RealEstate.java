@@ -13,8 +13,6 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import org.jvnet.substance.SubstanceLookAndFeel;
-import org.jvnet.substance.skin.SubstanceBusinessBlueSteelLookAndFeel;
 import org.jvnet.substance.skin.SubstanceRavenLookAndFeel;
 
 /**

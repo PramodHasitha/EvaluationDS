@@ -9,8 +9,6 @@ import com.ds.file.HouseFile;
 import com.ds.objects.House;
 import java.util.List;
 import java.util.Vector;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
